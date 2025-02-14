@@ -1,0 +1,377 @@
+/* Global styling */
+* {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Roboto', sans-serif; /* Set the default font to Roboto */
+   scroll-behavior: smooth;
+}
+body {
+    background-color: black;
+}
+
+/* Header section */
+header {
+    display: flex; 
+    align-items: flex-start; /* Align items at the top */
+    justify-content: space-between; /* Space between the logo and the button */
+    position: relative; 
+    background-image: url('assets/image.jpg'); /* Path to your local image */
+    background-size: cover; 
+    background-position: center; 
+    height: 80vh; 
+    color: white; 
+    padding: 0 45px; /* Horizontal padding only */
+    z-index: 0; 
+}
+
+/* Overlay for the header image */
+header::before {
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: rgba(0, 0, 0, 0.7); /* Black color with 70% opacity */
+    z-index: -1; 
+}
+
+/* Logo styling */
+.logo {
+    height: 25px; 
+    margin-top: 40px; /* Set distance from the top */
+    margin-left: 120px; /* Set distance from the left side */
+}
+
+/* Sign-in button styling */
+.sign-in {
+    background-color: rgb(255, 0, 0); 
+    color: rgb(255, 255, 255); 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    margin-top: 40px; /* Set distance from the top */
+    margin-right: 40px; /* Set distance from the right side */
+}
+
+/* Container styling */
+.container {
+    width: 591px; 
+    height: 567px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
+    position: absolute; /* Make container absolute */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); 
+}
+
+/* Content styling */
+.content {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    width: 100%; 
+    color: white; /* Set text color to white */
+}
+.content h1 {
+    font-size: 3.5rem; 
+    font-weight: 900; 
+    margin-bottom: 0.5rem; 
+}
+.content p {
+    color: rgb(255, 255, 255); 
+    font-size: 1rem; 
+    font-weight: 400; 
+    line-height: 1.5; 
+    margin-bottom: 1rem; 
+}
+
+/* Email container styling */
+.email-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 1rem; 
+    width: 100%; 
+}
+.email-input {
+    width: 360px; 
+    height: 56px; 
+    background: transparent; 
+    border: 1px solid white; 
+    padding: 10px; 
+    color: white; 
+    border-radius: 5px; 
+    margin-right: 10px; 
+}
+.get-started {
+    width: 213px; 
+    height: 54px; 
+    background-color: rgb(255, 0, 0); 
+    color: rgb(255, 255, 255); 
+    border: none; 
+    padding: 10px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    font-size: 1.2rem; /* Increase font size */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; 
+    justify-content: center; 
+}
+
+/* Scroll container styling */
+.scroll-container {
+    display: flex; 
+    align-items: center; 
+    
+    overflow: hidden; 
+    padding-top: 65px; 
+    padding-bottom: 65px; 
+    background-color: black; 
+    position: relative;
+}
+.picture-wrapper {
+    display: block;
+    position: relative; 
+    width: calc(100% - 80px); /* Adjust based on button width */
+    overflow: hidden; 
+
+    
+}
+
+.pictures {
+    position: relative; 
+    display: flex; 
+    transition: transform 0.3s ease-in-out;
+
+}
+.picture-item {
+    position: relative; 
+ height: 190px;
+ width: 196px;
+
+}
+.picture-item img {
+    width: 140px; /* Specify unit for width */
+    height: 196px; 
+    object-fit: contain; 
+    border-radius: 30px 30px 30px 30px; /* Correct border-radius syntax */
+    position: relative;
+    padding: 15px; 
+   cursor: pointer;
+ transition: 500ms;
+
+}
+
+.picture-item img:hover{
+    
+    opacity: 80%;
+}
+.movienumber:hover{
+    
+        color: rgb(11, 11, 11);
+ }
+
+ 
+
+
+
+
+/* Movie number styling */
+.movienumber {
+    position: absolute; 
+    font-size: 5.5rem; /* Double the current font size */
+    font-weight: 700; 
+    margin-top: 70px;
+    cursor: pointer;
+
+    color: black; 
+    stroke:  white;    
+    text-shadow: 
+    2px 2px 0 #c1c1c1,
+    -2px -2px 0 #c1c1c1,
+    2px -2px 0 #c1c1c1,
+    -2px 2px 0 #c1c1c1;
+   z-index: 99999;
+   transition: 500ms;
+  
+}
+
+
+/* Scroll button styling */
+.scroll-button {
+    background-color: #333; 
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    cursor: pointer; 
+    border-radius: 15px; 
+    font-size: 1.5rem; 
+    height: 120px; 
+    transition: 0.5s;
+    margin: 50px;
+}
+.scroll-button:hover{
+    background-color: #4e4e4e;
+}
+
+/* Left button styling */
+.left-button {
+    margin-right: 10px; 
+    margin-left: 120px; 
+}
+
+/* Right button styling */
+.right-button {
+    align-items: end; 
+    margin-left: 10px; 
+    margin-right: 120px; 
+}
+
+/* Box styling */
+.reasons{
+    color: #ffffff;
+    margin-bottom: 10px;
+    margin-left: 140px;
+    font-size: 1.5rem;
+}
+.box {
+    color: #ffff; 
+    flex-wrap: wrap; 
+    box-sizing: border-box; 
+    display: inline-flex; 
+    flex-direction: column; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-top: 25px; 
+    width: 300px; 
+    height: 300px; 
+    margin: 8px; 
+    background-image: linear-gradient(to bottom right, rgb(19, 19, 56), rgb(32, 0, 20)); 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    border-radius: 10px; 
+    margin-bottom: 20px; 
+}
+.box svg{
+    margin-left: 200px;
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+/* Box container styling */
+.boxcontainer {
+    margin-left: 120px; 
+    margin-right: 40px; 
+    background-color: black; 
+    height: auto; 
+}
+
+/* Section styling */
+section {
+    background-color: black; 
+    justify-content: center; 
+}
+
+/* Rbox styling */
+.rbox {
+    height: 72px; 
+    text-align: left; 
+    margin-left: 120px; 
+    margin-right: 120px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #2d2d2d; 
+    border-radius: 0px; 
+    padding: 20px; 
+    margin-bottom: 8px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    transition: 1s;
+}
+.rbox:hover{
+    background-color: #646464; 
+}
+.rbox p {
+    font-size: 18px; 
+    margin: 0; 
+    color: #ffffff; 
+    flex-grow: 1; 
+}
+.rbox .icon {
+    font-size: 30px; 
+    color: #ffffff; 
+}
+
+/* Footer styling */
+footer {
+    background-color: #000;
+}
+.langlogo {
+    height: 50px;
+    width: 50px;
+}
+.footer {
+    margin-top: 0;
+    margin-left: 125px; 
+}
+
+.footer ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+.footer ul li {
+    flex: 1 1 calc(25% - 20px); /* Adjust to fit four items per row */
+    margin-bottom: 10px; 
+}
+.footer a {
+    color: rgba(255, 255, 255, 0.7); 
+    text-decoration: underline; 
+}
+.footer p {
+    margin: 0px 0; 
+    font-size: 14px; 
+}
+
+/* Language selector styling */
+.language-border {
+    display: flex;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 4px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+}
+select {
+    background-color: #000;
+    color: #ffffff;
+    border: black;
+    cursor: pointer;
+
+}
+.language-selector-container {
+    margin-left: 0;
+    display: flex;
+}
+#signature{
+    margin-top: 150px;
+    color: rgba(255, 255, 255, 0.7); 
+    margin-left: 90px;
+    padding: 40px;
+    text-decoration: none;
+    
+}
