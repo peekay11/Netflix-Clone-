@@ -48,6 +48,12 @@ header::before {
     margin-left: 120px; /* Set distance from the left side */
 }
 
+
+.sign-in a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
 /* Sign-in button styling */
 .sign-in {
     background-color: rgb(255, 0, 0); 
