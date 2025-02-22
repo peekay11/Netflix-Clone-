@@ -10,6 +10,10 @@ body {
     background-color: black;
 }
 
+:root{
+ 
+}
+
 /* Header section */
 header {
     display: flex; 
@@ -22,7 +26,7 @@ header {
     height: 80vh; 
     color: white; 
     padding: 0 45px; /* Horizontal padding only */
-    z-index: 0; 
+    z-index: -999999; 
 }
 
 /* Overlay for the header image */
@@ -69,6 +73,7 @@ header::before {
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); 
+    b
 }
 
 /* Content styling */
@@ -101,11 +106,12 @@ header::before {
     align-items: center; 
     margin-top: 1rem; 
     width: 100%; 
+    margin-bottom: 350px;
 }
 .email-input {
     width: 360px; 
     height: 56px; 
-    background: transparent; 
+    background: rgba(0,0,0,0.6); 
     border: 1px solid white; 
     padding: 10px; 
     color: white; 
@@ -113,6 +119,7 @@ header::before {
     margin-right: 10px; 
 }
 .get-started {
+
     width: 213px; 
     height: 54px; 
     background-color: rgb(255, 0, 0); 
@@ -127,18 +134,41 @@ header::before {
     justify-content: center; 
 }
 
+
+
+.semicircle{
+    display: flex;
+    position: absolute;
+    height: 100px;
+    width: 100vw;
+    border-radius: 100% 100% 0 0 ;
+border-top: 5px solid #df0d20;
+background: linear-gradient(to bottom,#131d45 10%, #000000 100%, #000000 100%);
+    /* margin-top: 5px; */
+    top: 75%;
+    align-items: center;
+    justify-content: center;
+    z-index:8 ;
+}
+
+
+
 /* Scroll container styling */
 .scroll-container {
     display: flex; 
     align-items: center; 
-    
+    justify-content: center;
+    height: 100%;
+    /* width: 70%; */
     overflow: hidden; 
-    padding-top: 65px; 
-    padding-bottom: 65px; 
-    background-color: black; 
+    /* padding-top: 65px; 
+    padding-bottom: 65px;  */
+    /* background-color: black;  */
     position: relative;
+    z-index: 10;
 }
 .picture-wrapper {
+    z-index: 2;
     display: block;
     position: relative; 
     width: calc(100% - 80px); /* Adjust based on button width */
@@ -148,18 +178,24 @@ header::before {
 }
 
 .pictures {
+    z-index: 2;
+
     position: relative; 
     display: flex; 
     transition: transform 0.3s ease-in-out;
 
 }
 .picture-item {
+    z-index: 2;
+
     position: relative; 
  height: 190px;
  width: 196px;
 
 }
 .picture-item img {
+    z-index: 2;
+
     width: 140px; /* Specify unit for width */
     height: 196px; 
     object-fit: contain; 
@@ -262,7 +298,7 @@ header::before {
 }
 .box svg{
     margin-left: 200px;
-    margin-top: 90px;
+    margin-top: 90px;    
     display: flex;
     align-items: center;
     justify-content: end;
