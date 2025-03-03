@@ -61,16 +61,24 @@ header::before {
 
 /* Sign-in button styling */
 .sign-in {
-    background-color: rgb(255, 0, 0); 
+    background-color: rgb(229, 9, 20 );
     color: rgb(255, 255, 255); 
     border: none; 
     padding: 10px 20px; 
-    cursor: pointer; 
+ 
     border-radius: 5px; 
     margin-top: 40px; /* Set distance from the top */
-    margin-right: 40px; /* Set distance from the right side */
-}
 
+    margin-right: 40px; /* Set distance from the right side */
+    transition: 0.5s;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #df0d20;
+}
+.sign-in:hover{
+background-color: #df0d20;
+}
 /* Container styling */
 .container {
     width: 591px; 
@@ -133,7 +141,7 @@ header::before {
 .get-started {
     width: 213px; 
     height: 54px; 
-    background-color: rgb(255, 0, 0); 
+    background-color: rgb(229, 9, 20); 
     color: rgb(255, 255, 255); 
     border: none; 
     padding: 10px; 
@@ -143,8 +151,11 @@ header::before {
     font-weight: bold; /* Make the text bold */
     text-align: center; 
     justify-content: center; 
+    transition: 0.5s;
 }
-
+.get-started:hover{
+    background: #df0d20;
+}
 .semicircle {
     display: flex;
     position: absolute;
@@ -473,7 +484,7 @@ color: #c1c1c1;
 }
 
 .signup-form button {
-    background: red;
+    background: #df0d20;
     color: white;
     height: 56px;
     border: none;
